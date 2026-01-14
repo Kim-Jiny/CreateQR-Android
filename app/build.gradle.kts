@@ -9,6 +9,15 @@ android {
     namespace = "com.createqr"
     compileSdk = 35
 
+    signingConfigs {
+        create("release") {
+            storeFile = file("createqr-release.jks")
+            storePassword = "9512042"
+            keyAlias = "createqr"
+            keyPassword = "9512042"
+        }
+    }
+
     defaultConfig {
         applicationId = "com.createqr"
         minSdk = 24
@@ -26,6 +35,7 @@ android {
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
+            signingConfig = signingConfigs.getByName("release")
         }
     }
 
