@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CreateQR</string>
+
+    <!-- Navigation -->
+    <string name="create">Create</string>
+    <string name="scan">Scan</string>
+    <string name="my_qr">My QR</string>
+
+    <!-- Common -->
+    <string name="ok">OK</string>
+    <string name="cancel">Cancel</string>
+    <string name="save">Save</string>
+    <string name="share">Share</string>
+    <string name="delete">Delete</string>
+    <string name="generate">Generate</string>
+    <string name="color">Color</string>
+    <string name="logo">Logo</string>
+
+    <!-- Create QR -->
+    <string name="text_or_url">Text or URL</string>
+    <string name="wifi_name">WiFi Name (SSID)</string>
+    <string name="password">Password</string>
+    <string name="security_type">Security Type</string>
+    <string name="hidden_network">Hidden Network</string>
+    <string name="bank">Bank</string>
+    <string name="account_number">Account Number</string>
+    <string name="account_holder">Account Holder</string>
+    <string name="amount_optional">Amount (Optional)</string>
+    <string name="name_required">Name *</string>
+    <string name="phone_required">Phone *</string>
+    <string name="email_optional">Email (Optional)</string>
+    <string name="company_optional">Company (Optional)</string>
+    <string name="instagram_username">Instagram Username</string>
+    <string name="youtube_channel">YouTube Channel</string>
+    <string name="tiktok_username">TikTok Username</string>
+
+    <!-- Validation -->
+    <string name="enter_text_or_url">Please enter text or URL</string>
+    <string name="enter_wifi_name">Please enter WiFi name</string>
+    <string name="enter_account_number">Please enter account number</string>
+    <string name="enter_account_holder">Please enter account holder name</string>
+    <string name="enter_name">Please enter name</string>
+    <string name="enter_phone">Please enter phone number</string>
+    <string name="enter_username">Please enter username</string>
+    <string name="enter_channel">Please enter channel name</string>
+
+    <!-- Save -->
+    <string name="save_qr">Save QR</string>
+    <string name="save_to_gallery">Save to Gallery</string>
+    <string name="save_to_app">Save to My QR</string>
+    <string name="save_success">Saved successfully</string>
+    <string name="save_failed">Failed to save</string>
+
+    <!-- Color Picker -->
+    <string name="select_color_target">Select color target</string>
+    <string name="qr_color">QR Color</string>
+    <string name="background_color">Background Color</string>
+
+    <!-- Logo -->
+    <string name="select_logo_style">Select logo style</string>
+    <string name="circle">Circle</string>
+    <string name="square">Square</string>
+
+    <!-- Scan -->
+    <string name="scan_qr">Scan QR Code</string>
+    <string name="scan_from_gallery">Scan from Gallery</string>
+    <string name="camera_permission_required">Camera permission is required to scan QR codes</string>
+    <string name="no_qr_found">No QR code found</string>
+    <string name="scan_failed">Scan failed</string>
+    <string name="qr_content">QR Content</string>
+    <string name="open_in_browser">Open in Browser</string>
+    <string name="open_in_app">Open in App</string>
+    <string name="contact_found">Contact Found</string>
+    <string name="add_to_contacts">Add to Contacts</string>
+
+    <!-- My QR -->
+    <string name="no_saved_qr">No saved QR codes</string>
+    <string name="delete_confirmation">Are you sure you want to delete this QR code?</string>
+    <string name="edit_title">Edit Title</string>
+    <string name="title">Title</string>
+</resources>

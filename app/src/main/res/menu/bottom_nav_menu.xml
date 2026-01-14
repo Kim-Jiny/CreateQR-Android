@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/createQRFragment"
+        android:icon="@drawable/ic_create"
+        android:title="@string/create" />
+
+    <item
+        android:id="@+id/scanQRFragment"
+        android:icon="@drawable/ic_scan"
+        android:title="@string/scan" />
+
+    <item
+        android:id="@+id/myQRFragment"
+        android:icon="@drawable/ic_my_qr"
+        android:title="@string/my_qr" />
+
+</menu>

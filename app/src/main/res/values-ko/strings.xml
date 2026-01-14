@@ -1,0 +1,81 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CreateQR</string>
+
+    <!-- Navigation -->
+    <string name="create">생성</string>
+    <string name="scan">스캔</string>
+    <string name="my_qr">내 QR</string>
+
+    <!-- Common -->
+    <string name="ok">확인</string>
+    <string name="cancel">취소</string>
+    <string name="save">저장</string>
+    <string name="share">공유</string>
+    <string name="delete">삭제</string>
+    <string name="generate">생성</string>
+    <string name="color">색상</string>
+    <string name="logo">로고</string>
+
+    <!-- Create QR -->
+    <string name="text_or_url">텍스트 또는 URL</string>
+    <string name="wifi_name">WiFi 이름 (SSID)</string>
+    <string name="password">비밀번호</string>
+    <string name="security_type">보안 유형</string>
+    <string name="hidden_network">숨겨진 네트워크</string>
+    <string name="bank">은행</string>
+    <string name="account_number">계좌번호</string>
+    <string name="account_holder">예금주</string>
+    <string name="amount_optional">금액 (선택)</string>
+    <string name="name_required">이름 *</string>
+    <string name="phone_required">전화번호 *</string>
+    <string name="email_optional">이메일 (선택)</string>
+    <string name="company_optional">회사 (선택)</string>
+    <string name="instagram_username">Instagram 사용자명</string>
+    <string name="youtube_channel">YouTube 채널</string>
+    <string name="tiktok_username">TikTok 사용자명</string>
+
+    <!-- Validation -->
+    <string name="enter_text_or_url">텍스트 또는 URL을 입력하세요</string>
+    <string name="enter_wifi_name">WiFi 이름을 입력하세요</string>
+    <string name="enter_account_number">계좌번호를 입력하세요</string>
+    <string name="enter_account_holder">예금주명을 입력하세요</string>
+    <string name="enter_name">이름을 입력하세요</string>
+    <string name="enter_phone">전화번호를 입력하세요</string>
+    <string name="enter_username">사용자명을 입력하세요</string>
+    <string name="enter_channel">채널명을 입력하세요</string>
+
+    <!-- Save -->
+    <string name="save_qr">QR 저장</string>
+    <string name="save_to_gallery">갤러리에 저장</string>
+    <string name="save_to_app">내 QR에 저장</string>
+    <string name="save_success">저장 완료</string>
+    <string name="save_failed">저장 실패</string>
+
+    <!-- Color Picker -->
+    <string name="select_color_target">색상 변경 대상 선택</string>
+    <string name="qr_color">QR 색상</string>
+    <string name="background_color">배경 색상</string>
+
+    <!-- Logo -->
+    <string name="select_logo_style">로고 스타일 선택</string>
+    <string name="circle">원형</string>
+    <string name="square">사각형</string>
+
+    <!-- Scan -->
+    <string name="scan_from_gallery">갤러리에서 스캔</string>
+    <string name="camera_permission_required">QR 코드 스캔을 위해 카메라 권한이 필요합니다</string>
+    <string name="no_qr_found">QR 코드를 찾을 수 없습니다</string>
+    <string name="scan_failed">스캔 실패</string>
+    <string name="qr_content">QR 내용</string>
+    <string name="open_in_browser">브라우저에서 열기</string>
+    <string name="open_in_app">앱에서 열기</string>
+    <string name="contact_found">연락처 발견</string>
+    <string name="add_to_contacts">연락처에 추가</string>
+
+    <!-- My QR -->
+    <string name="no_saved_qr">저장된 QR 코드가 없습니다</string>
+    <string name="delete_confirmation">이 QR 코드를 삭제하시겠습니까?</string>
+    <string name="edit_title">제목 변경</string>
+    <string name="title">제목</string>
+</resources>

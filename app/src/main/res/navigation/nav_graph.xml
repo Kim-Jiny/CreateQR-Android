@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:id="@+id/nav_graph"
+    app:startDestination="@id/createQRFragment">
+
+    <fragment
+        android:id="@+id/createQRFragment"
+        android:name="com.createqr.presentation.create.CreateQRFragment"
+        android:label="Create" />
+
+    <fragment
+        android:id="@+id/scanQRFragment"
+        android:name="com.createqr.presentation.scan.ScanQRFragment"
+        android:label="Scan" />
+
+    <fragment
+        android:id="@+id/myQRFragment"
+        android:name="com.createqr.presentation.myqr.MyQRFragment"
+        android:label="My QR" />
+
+</navigation>
