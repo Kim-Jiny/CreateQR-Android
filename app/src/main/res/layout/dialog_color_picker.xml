@@ -1,0 +1,199 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="24dp">
+
+    <!-- Color Preview -->
+    <com.google.android.material.card.MaterialCardView
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:layout_marginBottom="24dp"
+        app:cardCornerRadius="12dp"
+        app:cardElevation="0dp"
+        app:strokeWidth="1dp"
+        app:strokeColor="@color/divider"
+        xmlns:app="http://schemas.android.com/apk/res-auto">
+
+        <View
+            android:id="@+id/color_preview"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+    </com.google.android.material.card.MaterialCardView>
+
+    <!-- Red Slider -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="24dp"
+            android:layout_height="wrap_content"
+            android:text="R"
+            android:textColor="#FF0000"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+        <SeekBar
+            android:id="@+id/seekbar_red"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:max="255"
+            android:progress="0"
+            android:progressTint="#FF0000"
+            android:thumbTint="#FF0000" />
+
+        <TextView
+            android:id="@+id/tv_red_value"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textAlignment="textEnd"
+            android:textColor="@color/on_surface" />
+
+    </LinearLayout>
+
+    <!-- Green Slider -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical"
+        android:layout_marginBottom="16dp">
+
+        <TextView
+            android:layout_width="24dp"
+            android:layout_height="wrap_content"
+            android:text="G"
+            android:textColor="#00FF00"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+        <SeekBar
+            android:id="@+id/seekbar_green"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:max="255"
+            android:progress="0"
+            android:progressTint="#00AA00"
+            android:thumbTint="#00AA00" />
+
+        <TextView
+            android:id="@+id/tv_green_value"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textAlignment="textEnd"
+            android:textColor="@color/on_surface" />
+
+    </LinearLayout>
+
+    <!-- Blue Slider -->
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center_vertical">
+
+        <TextView
+            android:layout_width="24dp"
+            android:layout_height="wrap_content"
+            android:text="B"
+            android:textColor="#0000FF"
+            android:textStyle="bold"
+            android:textSize="16sp" />
+
+        <SeekBar
+            android:id="@+id/seekbar_blue"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:max="255"
+            android:progress="0"
+            android:progressTint="#0000FF"
+            android:thumbTint="#0000FF" />
+
+        <TextView
+            android:id="@+id/tv_blue_value"
+            android:layout_width="40dp"
+            android:layout_height="wrap_content"
+            android:text="0"
+            android:textAlignment="textEnd"
+            android:textColor="@color/on_surface" />
+
+    </LinearLayout>
+
+    <!-- Preset Colors -->
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:layout_marginBottom="12dp"
+        android:text="@string/preset_colors"
+        android:textAppearance="?attr/textAppearanceLabelMedium"
+        android:textColor="@color/on_surface_variant" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:gravity="center">
+
+        <View
+            android:id="@+id/preset_black"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="6dp"
+            android:background="@drawable/bg_color_preset"
+            android:backgroundTint="#000000" />
+
+        <View
+            android:id="@+id/preset_white"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="6dp"
+            android:background="@drawable/bg_color_preset"
+            android:backgroundTint="#FFFFFF" />
+
+        <View
+            android:id="@+id/preset_red"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="6dp"
+            android:background="@drawable/bg_color_preset"
+            android:backgroundTint="#FF0000" />
+
+        <View
+            android:id="@+id/preset_blue"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="6dp"
+            android:background="@drawable/bg_color_preset"
+            android:backgroundTint="#0000FF" />
+
+        <View
+            android:id="@+id/preset_green"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="6dp"
+            android:background="@drawable/bg_color_preset"
+            android:backgroundTint="#00AA00" />
+
+        <View
+            android:id="@+id/preset_purple"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_margin="6dp"
+            android:background="@drawable/bg_color_preset"
+            android:backgroundTint="#800080" />
+
+    </LinearLayout>
+
+</LinearLayout>

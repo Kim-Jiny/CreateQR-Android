@@ -6,7 +6,7 @@ plugins {
 }
 
 android {
-    namespace = "com.createqr"
+    namespace = "com.jiny.createqr"
     compileSdk = 35
 
     signingConfigs {
@@ -19,7 +19,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.createqr"
+        applicationId = "com.jiny.createqr"
         minSdk = 24
         targetSdk = 35
         versionCode = 1
@@ -30,12 +30,16 @@ android {
 
     buildTypes {
         release {
-            isMinifyEnabled = false
+            isMinifyEnabled = true
+            isShrinkResources = true
             proguardFiles(
                 getDefaultProguardFile("proguard-android-optimize.txt"),
                 "proguard-rules.pro"
             )
             signingConfig = signingConfigs.getByName("release")
+            ndk {
+                debugSymbolLevel = "FULL"
+            }
         }
     }
 

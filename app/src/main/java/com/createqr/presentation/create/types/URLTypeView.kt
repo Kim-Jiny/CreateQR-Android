@@ -4,8 +4,8 @@ import android.content.Context
 import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.Toast
-import com.createqr.R
-import com.createqr.databinding.ViewTypeUrlBinding
+import com.jiny.createqr.R
+import com.jiny.createqr.databinding.ViewTypeUrlBinding
 
 class URLTypeView @JvmOverloads constructor(
     context: Context,

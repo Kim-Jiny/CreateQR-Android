@@ -17,8 +17,8 @@ import androidx.camera.lifecycle.ProcessCameraProvider
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
-import com.createqr.R
-import com.createqr.databinding.FragmentScanQrBinding
+import com.jiny.createqr.R
+import com.jiny.createqr.databinding.FragmentScanQrBinding
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.mlkit.vision.barcode.BarcodeScanning
 import com.google.mlkit.vision.common.InputImage

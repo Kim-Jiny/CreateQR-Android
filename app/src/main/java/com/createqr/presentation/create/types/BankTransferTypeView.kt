@@ -5,8 +5,8 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.ArrayAdapter
 import android.widget.Toast
-import com.createqr.R
-import com.createqr.databinding.ViewTypeBankTransferBinding
+import com.jiny.createqr.R
+import com.jiny.createqr.databinding.ViewTypeBankTransferBinding
 
 class BankTransferTypeView @JvmOverloads constructor(
     context: Context,

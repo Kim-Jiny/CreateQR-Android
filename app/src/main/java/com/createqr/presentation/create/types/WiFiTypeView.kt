@@ -5,8 +5,8 @@ import android.util.AttributeSet
 import android.view.LayoutInflater
 import android.widget.ArrayAdapter
 import android.widget.Toast
-import com.createqr.R
-import com.createqr.databinding.ViewTypeWifiBinding
+import com.jiny.createqr.R
+import com.jiny.createqr.databinding.ViewTypeWifiBinding
 
 class WiFiTypeView @JvmOverloads constructor(
     context: Context,

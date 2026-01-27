@@ -8,8 +8,8 @@ import android.widget.EditText
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.NavHostFragment
 import androidx.navigation.ui.setupWithNavController
-import com.createqr.R
-import com.createqr.databinding.ActivityMainBinding
+import com.jiny.createqr.R
+import com.jiny.createqr.databinding.ActivityMainBinding
 import dagger.hilt.android.AndroidEntryPoint
 
 @AndroidEntryPoint

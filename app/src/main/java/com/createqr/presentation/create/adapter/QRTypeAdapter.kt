@@ -6,8 +6,8 @@ import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.createqr.R
-import com.createqr.databinding.ItemQrTypeBinding
+import com.jiny.createqr.R
+import com.jiny.createqr.databinding.ItemQrTypeBinding
 import com.createqr.domain.model.QRTypeItem
 
 class QRTypeAdapter(

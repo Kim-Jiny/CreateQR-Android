@@ -1,6 +1,6 @@
 package com.createqr.data.repository
 
-import com.createqr.R
+import com.jiny.createqr.R
 import com.createqr.domain.model.CreateType
 import com.createqr.domain.model.QRTypeItem
 import com.createqr.domain.repository.QRTypeRepository

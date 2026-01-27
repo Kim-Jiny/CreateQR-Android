@@ -15,8 +15,8 @@ import androidx.lifecycle.Lifecycle
 import androidx.lifecycle.lifecycleScope
 import androidx.lifecycle.repeatOnLifecycle
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.createqr.R
-import com.createqr.databinding.FragmentMyQrBinding
+import com.jiny.createqr.R
+import com.jiny.createqr.databinding.FragmentMyQrBinding
 import com.createqr.domain.model.QRItem
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.textfield.TextInputEditText
@@ -77,21 +77,8 @@ class MyQRFragment : Fragment() {
     }
 
     private fun showQRDetailDialog(item: QRItem) {
-        val builder = MaterialAlertDialogBuilder(requireContext())
-            .setTitle(item.title)
-            .setMessage(item.qrData)
-            .setPositiveButton(R.string.ok, null)
-            .setNegativeButton(R.string.edit_title) { _, _ ->
-                showEditTitleDialog(item)
-            }
-
-        if (isUrl(item.qrData)) {
-            builder.setNeutralButton(R.string.open_in_browser) { _, _ ->
-                openInBrowser(item.qrData)
-            }
-        }
-
-        builder.show()
+        val bottomSheet = QRDetailBottomSheet.newInstance(item)
+        bottomSheet.show(childFragmentManager, "QRDetailBottomSheet")
     }
 
     private fun showEditTitleDialog(item: QRItem) {

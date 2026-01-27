@@ -7,7 +7,7 @@ import android.view.LayoutInflater
 import android.widget.FrameLayout
 import android.widget.ImageView
 import androidx.core.view.isVisible
-import com.createqr.databinding.ViewQrTypeBaseBinding
+import com.jiny.createqr.databinding.ViewQrTypeBaseBinding
 
 abstract class BaseQRTypeView @JvmOverloads constructor(
     context: Context,

@@ -2,18 +2,21 @@ package com.createqr.presentation.create
 
 import android.content.Intent
 import android.graphics.Bitmap
+import android.graphics.Color
 import android.os.Bundle
 import android.provider.MediaStore
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.SeekBar
+import android.widget.TextView
 import android.widget.Toast
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.viewModels
 import androidx.recyclerview.widget.LinearLayoutManager
-import com.createqr.R
-import com.createqr.databinding.FragmentCreateQrBinding
+import com.jiny.createqr.R
+import com.jiny.createqr.databinding.FragmentCreateQrBinding
 import com.createqr.domain.model.CreateType
 import com.createqr.domain.model.LogoStyle
 import com.createqr.domain.model.QRTypeItem
@@ -191,24 +194,80 @@ class CreateQRFragment : Fragment() {
     }
 
     private fun showColorSelectionDialog(isQRColor: Boolean) {
-        val colorNames = arrayOf("Black", "Red", "Blue", "Green", "Purple")
-        val colorValues = intArrayOf(
-            0xFF000000.toInt(),
-            0xFFFF0000.toInt(),
-            0xFF0000FF.toInt(),
-            0xFF00FF00.toInt(),
-            0xFF800080.toInt()
-        )
+        val dialogView = layoutInflater.inflate(R.layout.dialog_color_picker, null)
+
+        val colorPreview = dialogView.findViewById<View>(R.id.color_preview)
+        val seekbarRed = dialogView.findViewById<SeekBar>(R.id.seekbar_red)
+        val seekbarGreen = dialogView.findViewById<SeekBar>(R.id.seekbar_green)
+        val seekbarBlue = dialogView.findViewById<SeekBar>(R.id.seekbar_blue)
+        val tvRedValue = dialogView.findViewById<TextView>(R.id.tv_red_value)
+        val tvGreenValue = dialogView.findViewById<TextView>(R.id.tv_green_value)
+        val tvBlueValue = dialogView.findViewById<TextView>(R.id.tv_blue_value)
+
+        // Preset colors
+        val presetBlack = dialogView.findViewById<View>(R.id.preset_black)
+        val presetWhite = dialogView.findViewById<View>(R.id.preset_white)
+        val presetRed = dialogView.findViewById<View>(R.id.preset_red)
+        val presetBlue = dialogView.findViewById<View>(R.id.preset_blue)
+        val presetGreen = dialogView.findViewById<View>(R.id.preset_green)
+        val presetPurple = dialogView.findViewById<View>(R.id.preset_purple)
+
+        // Initial color
+        val initialColor = if (isQRColor) 0xFF000000.toInt() else 0xFFFFFFFF.toInt()
+        seekbarRed.progress = Color.red(initialColor)
+        seekbarGreen.progress = Color.green(initialColor)
+        seekbarBlue.progress = Color.blue(initialColor)
+
+        fun updateColor() {
+            val color = Color.rgb(seekbarRed.progress, seekbarGreen.progress, seekbarBlue.progress)
+            colorPreview.setBackgroundColor(color)
+            tvRedValue.text = seekbarRed.progress.toString()
+            tvGreenValue.text = seekbarGreen.progress.toString()
+            tvBlueValue.text = seekbarBlue.progress.toString()
+        }
+
+        fun setColor(r: Int, g: Int, b: Int) {
+            seekbarRed.progress = r
+            seekbarGreen.progress = g
+            seekbarBlue.progress = b
+            updateColor()
+        }
+
+        val seekBarListener = object : SeekBar.OnSeekBarChangeListener {
+            override fun onProgressChanged(seekBar: SeekBar?, progress: Int, fromUser: Boolean) {
+                updateColor()
+            }
+            override fun onStartTrackingTouch(seekBar: SeekBar?) {}
+            override fun onStopTrackingTouch(seekBar: SeekBar?) {}
+        }
+
+        seekbarRed.setOnSeekBarChangeListener(seekBarListener)
+        seekbarGreen.setOnSeekBarChangeListener(seekBarListener)
+        seekbarBlue.setOnSeekBarChangeListener(seekBarListener)
+
+        // Preset click listeners
+        presetBlack.setOnClickListener { setColor(0, 0, 0) }
+        presetWhite.setOnClickListener { setColor(255, 255, 255) }
+        presetRed.setOnClickListener { setColor(255, 0, 0) }
+        presetBlue.setOnClickListener { setColor(0, 0, 255) }
+        presetGreen.setOnClickListener { setColor(0, 170, 0) }
+        presetPurple.setOnClickListener { setColor(128, 0, 128) }
+
+        updateColor()
 
         MaterialAlertDialogBuilder(requireContext())
-            .setTitle(if (isQRColor) R.string.qr_color else R.string.background_color)
-            .setItems(colorNames) { _, which ->
+            .setTitle(if (isQRColor) R.string.select_qr_color else R.string.select_bg_color)
+            .setView(dialogView)
+            .setPositiveButton(R.string.ok) { _, _ ->
+                val color = Color.rgb(seekbarRed.progress, seekbarGreen.progress, seekbarBlue.progress)
+                val colorWithAlpha = color or 0xFF000000.toInt()
                 if (isQRColor) {
-                    viewModel.setQRColor(colorValues[which])
+                    viewModel.setQRColor(colorWithAlpha)
                 } else {
-                    viewModel.setBackgroundColor(colorValues[which])
+                    viewModel.setBackgroundColor(colorWithAlpha)
                 }
             }
+            .setNegativeButton(R.string.cancel, null)
             .show()
     }
 

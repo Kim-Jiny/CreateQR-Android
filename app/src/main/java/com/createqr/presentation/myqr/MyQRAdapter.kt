@@ -5,7 +5,7 @@ import android.view.ViewGroup
 import androidx.recyclerview.widget.DiffUtil
 import androidx.recyclerview.widget.ListAdapter
 import androidx.recyclerview.widget.RecyclerView
-import com.createqr.databinding.ItemMyQrBinding
+import com.jiny.createqr.databinding.ItemMyQrBinding
 import com.createqr.domain.model.QRItem
 import java.text.SimpleDateFormat
 import java.util.*
