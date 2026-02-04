@@ -1,0 +1,82 @@
+package com.jiny.createqr.presentation.create.adapter
+
+import android.view.LayoutInflater
+import android.view.ViewGroup
+import androidx.core.content.ContextCompat
+import androidx.recyclerview.widget.DiffUtil
+import androidx.recyclerview.widget.ListAdapter
+import androidx.recyclerview.widget.RecyclerView
+import com.jiny.createqr.R
+import com.jiny.createqr.databinding.ItemQrTypeBinding
+import com.jiny.createqr.domain.model.QRTypeItem
+
+class QRTypeAdapter(
+    private val onItemClick: (QRTypeItem) -> Unit
+) : ListAdapter<QRTypeItem, QRTypeAdapter.QRTypeViewHolder>(QRTypeDiffCallback()) {
+
+    private var selectedType: QRTypeItem? = null
+
+    fun setSelectedType(type: QRTypeItem?) {
+        val oldSelected = selectedType
+        selectedType = type
+
+        currentList.forEachIndexed { index, item ->
+            if (item == oldSelected || item == type) {
+                notifyItemChanged(index)
+            }
+        }
+    }
+
+    override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): QRTypeViewHolder {
+        val binding = ItemQrTypeBinding.inflate(
+            LayoutInflater.from(parent.context),
+            parent,
+            false
+        )
+        return QRTypeViewHolder(binding)
+    }
+
+    override fun onBindViewHolder(holder: QRTypeViewHolder, position: Int) {
+        val item = getItem(position)
+        holder.bind(item, item == selectedType)
+    }
+
+    inner class QRTypeViewHolder(
+        private val binding: ItemQrTypeBinding
+    ) : RecyclerView.ViewHolder(binding.root) {
+
+        fun bind(item: QRTypeItem, isSelected: Boolean) {
+            binding.apply {
+                ivIcon.setImageResource(item.iconRes)
+                tvTitle.text = item.title
+
+                // Selection state
+                if (isSelected) {
+                    root.setBackgroundResource(R.drawable.bg_qr_type_selected)
+                    iconContainer.setBackgroundResource(R.drawable.bg_icon_circle_selected)
+                    ivIcon.setColorFilter(ContextCompat.getColor(root.context, R.color.on_primary))
+                    tvTitle.setTextColor(ContextCompat.getColor(root.context, R.color.primary))
+                } else {
+                    root.setBackgroundResource(R.drawable.bg_qr_type_normal)
+                    iconContainer.setBackgroundResource(R.drawable.bg_icon_circle)
+                    ivIcon.setColorFilter(ContextCompat.getColor(root.context, R.color.primary))
+                    tvTitle.setTextColor(ContextCompat.getColor(root.context, R.color.on_surface))
+                }
+
+                root.setOnClickListener {
+                    onItemClick(item)
+                }
+            }
+        }
+    }
+
+    private class QRTypeDiffCallback : DiffUtil.ItemCallback<QRTypeItem>() {
+        override fun areItemsTheSame(oldItem: QRTypeItem, newItem: QRTypeItem): Boolean {
+            return oldItem.id == newItem.id
+        }
+
+        override fun areContentsTheSame(oldItem: QRTypeItem, newItem: QRTypeItem): Boolean {
+            return oldItem == newItem
+        }
+    }
+}

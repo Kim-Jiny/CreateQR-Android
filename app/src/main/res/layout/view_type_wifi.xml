@@ -6,10 +6,12 @@
     android:orientation="vertical">
 
     <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        style="@style/Widget.CreateQR.TextInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/wifi_name">
+        android:hint="@string/wifi_name"
+        app:startIconDrawable="@drawable/ic_wifi"
+        app:startIconTint="@color/on_surface_variant">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_ssid"
@@ -19,11 +21,13 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        style="@style/Widget.CreateQR.TextInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
+        android:layout_marginTop="12dp"
         android:hint="@string/password"
+        app:startIconDrawable="@drawable/ic_lock"
+        app:startIconTint="@color/on_surface_variant"
         app:endIconMode="password_toggle">
 
         <com.google.android.material.textfield.TextInputEditText
@@ -34,24 +38,30 @@
 
     </com.google.android.material.textfield.TextInputLayout>
 
-    <TextView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="@string/security_type" />
-
-    <Spinner
-        android:id="@+id/spinner_security"
+    <com.google.android.material.textfield.TextInputLayout
+        style="@style/Widget.CreateQR.TextInputLayout.Dropdown"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="4dp"
-        android:background="@drawable/bg_spinner" />
+        android:layout_marginTop="12dp"
+        android:hint="@string/security_type"
+        app:startIconDrawable="@drawable/ic_security"
+        app:startIconTint="@color/on_surface_variant">
 
-    <CheckBox
+        <AutoCompleteTextView
+            android:id="@+id/spinner_security"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:inputType="none" />
+
+    </com.google.android.material.textfield.TextInputLayout>
+
+    <com.google.android.material.checkbox.MaterialCheckBox
         android:id="@+id/cb_hidden"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:text="@string/hidden_network" />
+        android:layout_marginTop="12dp"
+        android:text="@string/hidden_network"
+        android:textColor="@color/on_surface"
+        app:buttonTint="@color/primary" />
 
 </LinearLayout>

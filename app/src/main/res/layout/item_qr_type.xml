@@ -3,25 +3,39 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="wrap_content"
     android:layout_height="wrap_content"
+    android:layout_marginEnd="8dp"
     android:background="@drawable/bg_qr_type_normal"
     android:gravity="center"
     android:orientation="vertical"
-    android:paddingHorizontal="16dp"
+    android:paddingHorizontal="14dp"
     android:paddingVertical="12dp"
-    android:minWidth="80dp">
+    android:minWidth="76dp">
 
-    <ImageView
-        android:id="@+id/iv_icon"
-        android:layout_width="32dp"
-        android:layout_height="32dp"
-        android:tint="@color/on_surface_variant" />
+    <!-- Icon with circular background -->
+    <FrameLayout
+        android:id="@+id/icon_container"
+        android:layout_width="44dp"
+        android:layout_height="44dp"
+        android:background="@drawable/bg_icon_circle">
+
+        <ImageView
+            android:id="@+id/iv_icon"
+            android:layout_width="24dp"
+            android:layout_height="24dp"
+            android:layout_gravity="center"
+            android:tint="@color/primary"
+            android:contentDescription="@null"
+            android:importantForAccessibility="no" />
+
+    </FrameLayout>
 
     <TextView
         android:id="@+id/tv_title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="8dp"
-        android:textAppearance="?attr/textAppearanceLabelMedium"
-        android:textColor="@color/on_surface" />
+        android:textAppearance="?attr/textAppearanceLabelSmall"
+        android:textColor="@color/on_surface"
+        android:maxLines="1" />
 
 </LinearLayout>

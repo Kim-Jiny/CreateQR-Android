@@ -7,16 +7,19 @@
 
     <com.google.android.material.textfield.TextInputLayout
         android:id="@+id/til_url"
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        style="@style/Widget.CreateQR.TextInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/text_or_url">
+        android:hint="@string/text_or_url"
+        app:startIconDrawable="@drawable/ic_link"
+        app:startIconTint="@color/on_surface_variant">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_url"
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="textUri" />
+            android:inputType="textUri"
+            android:maxLines="3" />
 
     </com.google.android.material.textfield.TextInputLayout>
 

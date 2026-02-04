@@ -5,6 +5,15 @@
 # For more details, see
 #   http://developer.android.com/guide/developing/tools/proguard.html
 
+# Keep Application class
+-keep class com.jiny.createqr.CreateQRApplication { *; }
+
+# Keep all Activities, Fragments
+-keep class com.jiny.createqr.presentation.** { *; }
+
+# Keep domain models
+-keep class com.jiny.createqr.domain.model.** { *; }
+
 # Keep Hilt classes
 -keep class dagger.hilt.** { *; }
 -keep class javax.inject.** { *; }

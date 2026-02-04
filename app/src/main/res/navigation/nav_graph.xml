@@ -6,17 +6,17 @@
 
     <fragment
         android:id="@+id/createQRFragment"
-        android:name="com.createqr.presentation.create.CreateQRFragment"
+        android:name="com.jiny.createqr.presentation.create.CreateQRFragment"
         android:label="Create" />
 
     <fragment
         android:id="@+id/scanQRFragment"
-        android:name="com.createqr.presentation.scan.ScanQRFragment"
+        android:name="com.jiny.createqr.presentation.scan.ScanQRFragment"
         android:label="Scan" />
 
     <fragment
         android:id="@+id/myQRFragment"
-        android:name="com.createqr.presentation.myqr.MyQRFragment"
+        android:name="com.jiny.createqr.presentation.myqr.MyQRFragment"
         android:label="My QR" />
 
 </navigation>

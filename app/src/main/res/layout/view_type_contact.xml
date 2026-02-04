@@ -6,24 +6,29 @@
     android:orientation="vertical">
 
     <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        style="@style/Widget.CreateQR.TextInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:hint="@string/name_required">
+        android:hint="@string/name_required"
+        app:startIconDrawable="@drawable/ic_person"
+        app:startIconTint="@color/on_surface_variant">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_name"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content" />
+            android:layout_height="wrap_content"
+            android:inputType="textPersonName" />
 
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        style="@style/Widget.CreateQR.TextInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:hint="@string/phone_required">
+        android:layout_marginTop="12dp"
+        android:hint="@string/phone_required"
+        app:startIconDrawable="@drawable/ic_phone"
+        app:startIconTint="@color/on_surface_variant">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_phone"
@@ -34,11 +39,13 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        style="@style/Widget.CreateQR.TextInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:hint="@string/email_optional">
+        android:layout_marginTop="12dp"
+        android:hint="@string/email_optional"
+        app:startIconDrawable="@drawable/ic_email"
+        app:startIconTint="@color/on_surface_variant">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_email"
@@ -49,11 +56,13 @@
     </com.google.android.material.textfield.TextInputLayout>
 
     <com.google.android.material.textfield.TextInputLayout
-        style="@style/Widget.Material3.TextInputLayout.OutlinedBox"
+        style="@style/Widget.CreateQR.TextInputLayout"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="8dp"
-        android:hint="@string/company_optional">
+        android:layout_marginTop="12dp"
+        android:hint="@string/company_optional"
+        app:startIconDrawable="@drawable/ic_business"
+        app:startIconTint="@color/on_surface_variant">
 
         <com.google.android.material.textfield.TextInputEditText
             android:id="@+id/et_company"

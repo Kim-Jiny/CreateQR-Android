@@ -6,6 +6,7 @@
     <string name="create">Create</string>
     <string name="scan">Scan</string>
     <string name="my_qr">My QR</string>
+    <string name="create_qr_title">Create QR</string>
 
     <!-- Common -->
     <string name="ok">OK</string>
@@ -70,12 +71,17 @@
     <string name="scan_failed">Scan failed</string>
     <string name="qr_content">QR Content</string>
     <string name="open_in_browser">Open in Browser</string>
+    <string name="open_failed">Failed to open</string>
     <string name="open_in_app">Open in App</string>
     <string name="contact_found">Contact Found</string>
     <string name="add_to_contacts">Add to Contacts</string>
 
     <!-- My QR -->
-    <string name="no_saved_qr">No saved QR codes</string>
+    <string name="empty_title">No QR codes yet</string>
+    <string name="no_saved_qr">Create your first QR code\nand save it here!</string>
+    <string name="create_qr_button">Create QR</string>
+    <string name="qr_thumbnail">QR thumbnail</string>
+    <string name="empty_illustration">Empty state illustration</string>
     <string name="delete_confirmation">Are you sure you want to delete this QR code?</string>
     <string name="edit_title">Edit Title</string>
     <string name="title">Title</string>

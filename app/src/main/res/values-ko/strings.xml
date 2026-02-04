@@ -6,6 +6,7 @@
     <string name="create">생성</string>
     <string name="scan">스캔</string>
     <string name="my_qr">내 QR</string>
+    <string name="create_qr_title">QR 생성</string>
 
     <!-- Common -->
     <string name="ok">확인</string>
@@ -63,6 +64,7 @@
     <string name="square">사각형</string>
 
     <!-- Scan -->
+    <string name="scan_qr">QR 코드 스캔</string>
     <string name="scan_from_gallery">갤러리에서 스캔</string>
     <string name="camera_permission_required">QR 코드 스캔을 위해 카메라 권한이 필요합니다</string>
     <string name="no_qr_found">QR 코드를 찾을 수 없습니다</string>
@@ -75,6 +77,9 @@
 
     <!-- My QR -->
     <string name="no_saved_qr">저장된 QR 코드가 없습니다</string>
+    <string name="create_qr_button">QR 생성하기</string>
+    <string name="qr_thumbnail">QR 미리보기</string>
+    <string name="empty_illustration">빈 상태 일러스트</string>
     <string name="delete_confirmation">이 QR 코드를 삭제하시겠습니까?</string>
     <string name="edit_title">제목 변경</string>
     <string name="title">제목</string>
