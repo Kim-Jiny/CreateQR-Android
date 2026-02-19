@@ -5,6 +5,16 @@
     android:layout_height="match_parent"
     android:background="@color/background">
 
+    <com.google.android.gms.ads.AdView
+        android:id="@+id/ad_view_create"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        app:adSize="BANNER"
+        app:adUnitId="ca-app-pub-2707874353926722/4485976546"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/rv_qr_types"
         android:layout_width="0dp"
@@ -16,7 +26,7 @@
         android:paddingBottom="12dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toBottomOf="@id/ad_view_create" />
 
     <FrameLayout
         android:id="@+id/type_container"

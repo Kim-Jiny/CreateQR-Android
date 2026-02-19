@@ -18,6 +18,7 @@ import androidx.recyclerview.widget.LinearLayoutManager
 import com.jiny.createqr.R
 import com.jiny.createqr.databinding.FragmentMyQrBinding
 import com.jiny.createqr.domain.model.QRItem
+import com.google.android.gms.ads.AdRequest
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import com.google.android.material.textfield.TextInputEditText
 import com.google.android.material.textfield.TextInputLayout
@@ -46,6 +47,12 @@ class MyQRFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setupRecyclerView()
         observeViewModel()
+        loadBannerAd()
+    }
+
+    private fun loadBannerAd() {
+        val adRequest = AdRequest.Builder().build()
+        binding.adViewMyqr.loadAd(adRequest)
     }
 
     private fun setupRecyclerView() {

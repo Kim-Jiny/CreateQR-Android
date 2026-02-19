@@ -22,6 +22,7 @@ import com.jiny.createqr.domain.model.LogoStyle
 import com.jiny.createqr.domain.model.QRTypeItem
 import com.jiny.createqr.presentation.create.adapter.QRTypeAdapter
 import com.jiny.createqr.presentation.create.types.*
+import com.google.android.gms.ads.AdRequest
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import dagger.hilt.android.AndroidEntryPoint
 
@@ -56,6 +57,12 @@ class CreateQRFragment : Fragment() {
         super.onViewCreated(view, savedInstanceState)
         setupRecyclerView()
         observeViewModel()
+        loadBannerAd()
+    }
+
+    private fun loadBannerAd() {
+        val adRequest = AdRequest.Builder().build()
+        binding.adViewCreate.loadAd(adRequest)
     }
 
     private fun setupRecyclerView() {

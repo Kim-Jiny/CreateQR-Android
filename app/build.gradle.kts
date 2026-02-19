@@ -101,6 +101,12 @@ dependencies {
     // Gson
     implementation("com.google.code.gson:gson:2.10.1")
 
+    // AdMob
+    implementation("com.google.android.gms:play-services-ads:23.6.0")
+
+    // Guava (resolve ListenableFuture conflict between CameraX and play-services-ads)
+    implementation("com.google.guava:guava:32.1.3-android")
+
     // Testing
     testImplementation("junit:junit:4.13.2")
     androidTestImplementation("androidx.test.ext:junit:1.1.5")
