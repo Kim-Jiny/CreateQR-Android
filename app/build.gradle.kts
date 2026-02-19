@@ -59,8 +59,9 @@ android {
 
 dependencies {
     // Core Android
-    implementation("androidx.core:core-ktx:1.12.0")
-    implementation("androidx.appcompat:appcompat:1.6.1")
+    implementation("androidx.core:core-ktx:1.15.0")
+    implementation("androidx.appcompat:appcompat:1.7.0")
+    implementation("androidx.activity:activity-ktx:1.9.3")
     implementation("com.google.android.material:material:1.11.0")
     implementation("androidx.constraintlayout:constraintlayout:2.1.4")
 
@@ -78,13 +79,13 @@ dependencies {
     kapt("com.google.dagger:hilt-compiler:2.51.1")
 
     // CameraX
-    implementation("androidx.camera:camera-core:1.4.1")
-    implementation("androidx.camera:camera-camera2:1.4.1")
-    implementation("androidx.camera:camera-lifecycle:1.4.1")
-    implementation("androidx.camera:camera-view:1.4.1")
+    implementation("androidx.camera:camera-core:1.5.3")
+    implementation("androidx.camera:camera-camera2:1.5.3")
+    implementation("androidx.camera:camera-lifecycle:1.5.3")
+    implementation("androidx.camera:camera-view:1.5.3")
 
-    // ML Kit Barcode Scanning
-    implementation("com.google.mlkit:barcode-scanning:17.3.0")
+    // ML Kit Barcode Scanning (unbundled - 16KB page size 호환)
+    implementation("com.google.android.gms:play-services-mlkit-barcode-scanning:18.3.1")
 
     // ZXing for QR Code Generation
     implementation("com.google.zxing:core:3.5.2")
@@ -105,7 +106,8 @@ dependencies {
     implementation("com.google.android.gms:play-services-ads:23.6.0")
 
     // Guava (resolve ListenableFuture conflict between CameraX and play-services-ads)
-    implementation("com.google.guava:guava:32.1.3-android")
+    implementation("com.google.guava:guava:33.3.1-android")
+
 
     // Testing
     testImplementation("junit:junit:4.13.2")

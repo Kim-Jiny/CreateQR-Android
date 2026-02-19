@@ -31,10 +31,8 @@
         <item name="colorError">@color/error</item>
         <item name="colorOnError">@color/on_error</item>
 
-        <!-- System UI -->
-        <item name="android:statusBarColor">@color/background</item>
+        <!-- System UI (edge-to-edge handled via enableEdgeToEdge()) -->
         <item name="android:windowLightStatusBar">true</item>
-        <item name="android:navigationBarColor">@color/surface</item>
         <item name="android:windowLightNavigationBar">true</item>
 
         <!-- Elevation Overlay -->
